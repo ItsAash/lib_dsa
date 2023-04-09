@@ -1,10 +1,10 @@
-# lib_dsa
+# 📚lib_dsa
 
-📚Welcome to lib_dsa! This is a library for Data Structures and Algorithms (DSA) that provides a collection of usable components and code snippets.
+Welcome to lib_dsa! This is a library for Data Structures and Algorithms (DSA) that provides a collection of usable components and code snippets.
 
-## Purpose
+## 📚Purpose
 
-🎯The purpose of this library is to serve as a resource for developers who are interested in learning or improving their understanding of DSA. It provides a collection of well-documented, reusable components that can be used as building blocks in larger projects or as learning resources for specific DSA concepts.
+The purpose of this library is to serve as a resource for developers who are interested in learning or improving their understanding of DSA. It provides a collection of well-documented, reusable components that can be used as building blocks in larger projects or as learning resources for specific DSA concepts.
 
 ## 🚀Installation
 
