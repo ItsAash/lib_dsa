@@ -1,16 +1,19 @@
 #ifndef STACK_HPP
 #define STACK_HPP
 
-class Stack {
+template <class T>
+class Stack
+{
 public:
   Stack() {}
   ~Stack() {}
 
-  virtual void push(int) = 0;
-  virtual int pop() = 0;
+  virtual void push(T) = 0;
+  virtual T pop() = 0;
 
   virtual bool isEmpty() = 0;
-  virtual bool isFull() {}
+  virtual bool isFull() = 0;
+  virtual T peek() = 0;
 };
 
 #endif // !STACK_HPP
