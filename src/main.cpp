@@ -1,7 +1,19 @@
 #include <iostream>
+#include "Stack.hpp"
 
-int main() {
-  std::cout << "message" << std::endl;
+int main()
+{
+  StackWithArray<int> s(3);
+  cout << s.isFull() << endl;
+  s.push(6);
+  s.push(9);
+  s.push(10);
+  cout << s.isEmpty() << endl;
+  cout << s.isFull() << endl;
+  s.push(3);
+  cout << s.pop() << endl;
 
-  return 0;
+  s.printStack();
+
+  // cout << s.peek() << endl;
 }
