@@ -4,9 +4,8 @@ CXX_FLAGS := -Wall -Wextra -Wno-unused-parameter -std=c++17 -ggdb
 BIN		:= build
 SRC		:= src
 INCLUDE	:= include
-LIB		:= lib
 
-LIBRARIES	:= -lsfml-graphics -lsfml-window -lsfml-system
+LIBRARIES	:= 
 EXECUTABLE	:= main
 
 MKDIR_P = mkdir -p
@@ -25,7 +24,7 @@ run: clean all
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
-	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
+	$(CXX) $(CXX_FLAGS) -I $(INCLUDE) $^ -o $@ $(LIBRARIES)
 
 clean:
 	-rm $(BIN)/*
