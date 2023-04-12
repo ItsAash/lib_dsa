@@ -1,19 +1,18 @@
+#include "StackWithArray.hpp"
 #include <iostream>
-#include "Stack.hpp"
 
-int main()
-{
+int main() {
   StackWithArray<int> s(3);
-  cout << s.isFull() << endl;
+  std::cout << s.isFull() << std::endl;
   s.push(6);
   s.push(9);
   s.push(10);
-  cout << s.isEmpty() << endl;
-  cout << s.isFull() << endl;
+  std::cout << s.isEmpty() << std::endl;
+  std::cout << s.isFull() << std::endl;
   s.push(3);
-  cout << s.pop() << endl;
+  std::cout << s.pop() << std::endl;
 
   s.printStack();
 
-  // cout << s.peek() << endl;
+  std::cout << s.peek() << std::endl;
 }
