@@ -5,11 +5,11 @@ template <class T>
 class QueueWithArray : public Queue<T>
 {
 private:
-  T* queue;
-  int front;
-  int rear;
-  int size;
-  int capacity;
+  T* _queue;
+  int _front;
+  int _rear;
+  int _size;
+  int _capacity;
 
 public:
     QueueWithArray(int);
@@ -26,17 +26,17 @@ public:
 template <class T>
 QueueWithArray<T>::QueueWithArray(int capacity)
 {
-  this->capacity = capacity;
-  queue = new T[capacity];
-  front = 0;
-  rear = -1;
-  size = 0;
+  this->capacity = _capacity;
+  _queue = new T[capacity];
+  _front = 0;
+  _rear = -1;
+  _size = 0;
 }
 
 template <class T>
 QueueWithArray<T>::~QueueWithArray()
 {
-  delete[] queue;
+  delete[] _queue;
 }
 
 template <class T>
@@ -47,9 +47,9 @@ void QueueWithArray<T>::enqueue(T item)
     std::cout << "Queue is full" << std::endl;
     return;
   }
-  rear = (rear + 1) % capacity;
-  queue[rear] = item;
-  size++;
+  _rear = (_rear + 1) % _capacity;
+  _queue[_rear] = item;
+  _size++;
 }
 
 template <class T>
@@ -60,22 +60,22 @@ T QueueWithArray<T>::dequeue()
     std::cout << "Queue is empty" << std::endl;
     return 0;
   }
-  T item = queue[front];
-  front = (front + 1) % capacity;
-  size--;
+  T item = _queue[_front];
+  _front = (_front + 1) % _capacity;
+  _size--;
   return item;
 }
 
 template <class T>
 bool QueueWithArray<T>::isEmpty()
 {
-  return size == 0;
+  return _size == 0;
 }
 
 template <class T>
 bool QueueWithArray<T>::isFull()
 {
-  return size == capacity;
+  return _size == _capacity;
 }
 
 template <class T>
@@ -86,7 +86,7 @@ T QueueWithArray<T>::peek()
     std::cout << "Queue is empty" << std::endl;
     return 0;
   }
-  return queue[front];
+  return _queue[_front];
 }
 
  // !QUEUEWITHARRAY_HPP
